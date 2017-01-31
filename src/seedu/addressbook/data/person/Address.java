@@ -65,4 +65,8 @@ public class Address {
     public boolean isPrivate() {
         return isPrivate;
     }
+    
+    public String getAddressAsString() {
+	return block.getValue() + street.getValue() + unit.getValue() + postalCode.getValue();
+    }
 }
