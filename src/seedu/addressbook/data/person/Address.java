@@ -47,19 +47,19 @@ public class Address {
 
     @Override
     public String toString() {
-        return value;
+        return this.getAddressAsString();
     }
 
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof Address // instanceof handles nulls
-                && this.value.equals(((Address) other).value)); // state check
+                && this.getAddressAsString().equals(((Address) other).getAddressAsString())); // state check
     }
 
     @Override
     public int hashCode() {
-        return value.hashCode();
+        return this.getAddressAsString().hashCode();
     }
 
     public boolean isPrivate() {
